@@ -1,32 +1,18 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/layout/Sidebar";
 import Header from "../components/layout/Header";
-import Footer from "../components/layout/Footer";
 
 const AdminLayout = () => {
   return (
-    <div className="admin-layout">
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <Sidebar />
-      </aside>
+    <div className="flex h-screen">
+      <Sidebar />
 
-      {/* Main Content */}
-      <div className="main-container">
-        {/* Header */}
-        <header className="header">
-          <Header />
-        </header>
+      <div className="flex flex-col flex-1">
+        <Header />
 
-        {/* Page Content */}
-        <main className="content">
+        <main className="flex-1 bg-gray-100 p-6 overflow-auto">
           <Outlet />
         </main>
-
-        {/* Footer */}
-        <footer className="footer">
-          <Footer />
-        </footer>
       </div>
     </div>
   );
