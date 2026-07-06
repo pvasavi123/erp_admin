@@ -96,7 +96,7 @@ export default function Login() {
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="admin@demo.com"
+                placeholder="Enter Email Id"
                 style={{
                   width: '100%',
                   padding: '12px 16px 12px 44px',
@@ -124,7 +124,7 @@ export default function Login() {
                 type="password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
-                placeholder="••••••••"
+                placeholder="Enter Password"
                 style={{
                   width: '100%',
                   padding: '12px 16px 12px 44px',
