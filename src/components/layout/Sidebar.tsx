@@ -1,15 +1,16 @@
 import { Link, useLocation } from "react-router-dom";
-import { 
-  LayoutDashboard, 
-  Users, 
-  Database, 
-  UploadCloud, 
-  Keyboard, 
-  Calendar, 
-  BookOpen, 
-  Download, 
+import {
+  LayoutDashboard,
+  Users,
+  Database,
+  UploadCloud,
+  Keyboard,
+  Calendar,
+  BookOpen,
+  Download,
   Files,
-  LogOut
+  LogOut,
+  FileSpreadsheet,
 } from "lucide-react";
 import { useAppState } from "../../context/AppContext";
 
@@ -63,6 +64,29 @@ const Sidebar = () => {
               <span className="label" style={{ textTransform: 'none' }}>{state.user?.email || 'admin@demo.com'}</span>
             </div>
           </div>
+          <button
+  style={{
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    gap: "8px",
+    width: "100%",
+    padding: "10px",
+    background: "#2563eb",
+    color: "#fff",
+    border: "none",
+    borderRadius: "8px",
+    cursor: "pointer",
+    fontWeight: 600,
+    fontSize: "0.9rem",
+    transition: "background 0.2s",
+  }}
+  onMouseOver={(e) => (e.currentTarget.style.background = "#1d4ed8")}
+  onMouseOut={(e) => (e.currentTarget.style.background = "#2563eb")}
+>
+  <FileSpreadsheet size={16} />
+  Add In
+</button>
           <button 
             onClick={handleLogout}
             style={{
